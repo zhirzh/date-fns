@@ -25,12 +25,18 @@ describe('isThisYear', () => {
     assert(isThisYear(date) === false)
   })
 
+  it('allows to specify which day is the first day of the week', () => {
+    const date = new Date(2014, 6 /* Jul */, 2)
+    assert(isThisYear(date, { yearStartsOn: 3 }) === true)
+    assert(isThisYear(date, { yearStartsOn: 7 }) === false)
+  })
+
   it('accepts a timestamp', () => {
     const date = new Date(2014, 6 /* Jul */, 2).getTime()
     assert(isThisYear(date) === true)
   })
 
-  it('throws TypeError exception if passed less than 1 argument', function() {
+  it('throws TypeError exception if passed less than 1 argument', function () {
     // @ts-expect-error
     assert.throws(isThisYear.bind(null), TypeError)
   })

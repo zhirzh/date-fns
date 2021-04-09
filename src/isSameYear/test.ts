@@ -21,6 +21,25 @@ describe('isSameYear', function () {
     assert(result === false)
   })
 
+  it('allows to specify which day is the first day of the year', function () {
+    const result = isSameYear(
+      new Date(2014, 7 /* Aug */, 31),
+      new Date(2014, 8 /* Sep */, 4),
+      { yearStartsOn: 1 }
+    )
+    assert(result === true)
+  })
+
+  it('implicitly converts options', function () {
+    const result = isSameYear(
+      new Date(2014, 7 /* Aug */, 31),
+      new Date(2014, 8 /* Sep */, 4),
+      // @ts-expect-error
+      { yearStartsOn: '1' }
+    )
+    assert(result === true)
+  })
+
   it('accepts a timestamp', function () {
     const result = isSameYear(
       new Date(2014, 8 /* Sep */, 2).getTime(),
@@ -42,6 +61,17 @@ describe('isSameYear', function () {
   it('returns false if the both dates are `Invalid Date`', function () {
     const result = isSameYear(new Date(NaN), new Date(NaN))
     assert(result === false)
+  })
+
+  it('throws `RangeError` if `options.yearStartsOn` is not convertable to 0, 1, ..., 11 or undefined', function () {
+    const block = () =>
+      isSameYear(
+        new Date(2014, 7 /* Aug */, 31),
+        new Date(2014, 8 /* Sep */, 4),
+        // @ts-expect-error
+        { yearStartsOn: NaN }
+      )
+    assert.throws(block, RangeError)
   })
 
   it('throws TypeError exception if passed less than 2 arguments', function () {

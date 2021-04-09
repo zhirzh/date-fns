@@ -16,8 +16,8 @@ import endOfYear from '../endOfYear'
  *
  * - [Changes that are common for the whole library](https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#Common-Changes).
  *
- * @param {Date|Number} date - the date to check
- * @param {Date|Number} dateToCompare - the date to compare
+ * @param {Date|Number} dateLeft - the first date to check
+ * @param {Date|Number} dateRight - the second date to check
  * @param {Object} [options] - an object with options.
  * @param {0|1|2|3|4|5|6|7|8|9|10|11} [options.yearStartsOn=0] - the index of the first month of the year (0 - January)
  * @returns {Boolean} the dates are in the same year
@@ -34,20 +34,23 @@ import endOfYear from '../endOfYear'
  * //=> false
  */
 export default function isSameYear(
-  dirtyDate: Date | number,
-  dirtyDateToCompare: Date | number,
+  dirtyDateLeft: Date | number,
+  dirtyDateRight: Date | number,
   options?: YearStartOptions
 ): boolean {
   requiredArgs(2, arguments)
 
-  if (options && options?.yearStartsOn > toDate(dirtyDate).getMonth()) {
+  const dateLeft = toDate(dirtyDateLeft)
+  const dateRight = toDate(dirtyDateRight)
+
+  if (options && options.yearStartsOn > dateLeft.getMonth()) {
     throw Error('Month must be after the start of year param')
   }
 
-  const startTime = startOfYear(dirtyDate, options).getTime()
-  const endTime = endOfYear(dirtyDate, options).getTime()
+  const startTime = startOfYear(dirtyDateLeft, options).getTime()
+  const endTime = endOfYear(dirtyDateLeft, options).getTime()
 
-  const time = toDate(dirtyDateToCompare).getTime()
+  const time = dateRight.getTime()
 
   return time >= startTime && time <= endTime
 }

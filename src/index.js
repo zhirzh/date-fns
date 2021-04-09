@@ -12,45 +12,23 @@ export { default as addQuarters } from './addQuarters/index'
 export { default as addSeconds } from './addSeconds/index'
 export { default as addWeeks } from './addWeeks/index'
 export { default as addYears } from './addYears/index'
-export {
-  default as areIntervalsOverlapping
-} from './areIntervalsOverlapping/index'
+export { default as areIntervalsOverlapping } from './areIntervalsOverlapping/index'
 export { default as closestIndexTo } from './closestIndexTo/index'
 export { default as closestTo } from './closestTo/index'
 export { default as compareAsc } from './compareAsc/index'
 export { default as compareDesc } from './compareDesc/index'
-export {
-  default as differenceInBusinessDays
-} from './differenceInBusinessDays/index'
-export {
-  default as differenceInCalendarDays
-} from './differenceInCalendarDays/index'
-export {
-  default as differenceInCalendarISOWeekYears
-} from './differenceInCalendarISOWeekYears/index'
-export {
-  default as differenceInCalendarISOWeeks
-} from './differenceInCalendarISOWeeks/index'
-export {
-  default as differenceInCalendarMonths
-} from './differenceInCalendarMonths/index'
-export {
-  default as differenceInCalendarQuarters
-} from './differenceInCalendarQuarters/index'
-export {
-  default as differenceInCalendarWeeks
-} from './differenceInCalendarWeeks/index'
-export {
-  default as differenceInCalendarYears
-} from './differenceInCalendarYears/index'
+export { default as differenceInBusinessDays } from './differenceInBusinessDays/index'
+export { default as differenceInCalendarDays } from './differenceInCalendarDays/index'
+export { default as differenceInCalendarISOWeekYears } from './differenceInCalendarISOWeekYears/index'
+export { default as differenceInCalendarISOWeeks } from './differenceInCalendarISOWeeks/index'
+export { default as differenceInCalendarMonths } from './differenceInCalendarMonths/index'
+export { default as differenceInCalendarQuarters } from './differenceInCalendarQuarters/index'
+export { default as differenceInCalendarWeeks } from './differenceInCalendarWeeks/index'
+export { default as differenceInCalendarYears } from './differenceInCalendarYears/index'
 export { default as differenceInDays } from './differenceInDays/index'
 export { default as differenceInHours } from './differenceInHours/index'
-export {
-  default as differenceInISOWeekYears
-} from './differenceInISOWeekYears/index'
-export {
-  default as differenceInMilliseconds
-} from './differenceInMilliseconds/index'
+export { default as differenceInISOWeekYears } from './differenceInISOWeekYears/index'
+export { default as differenceInMilliseconds } from './differenceInMilliseconds/index'
 export { default as differenceInMinutes } from './differenceInMinutes/index'
 export { default as differenceInMonths } from './differenceInMonths/index'
 export { default as differenceInQuarters } from './differenceInQuarters/index'
@@ -59,6 +37,7 @@ export { default as differenceInWeeks } from './differenceInWeeks/index'
 export { default as differenceInYears } from './differenceInYears/index'
 export { default as eachDayOfInterval } from './eachDayOfInterval/index'
 export { default as eachHourOfInterval } from './eachHourOfInterval/index'
+export { default as eachMinuteOfInterval } from './eachMinuteOfInterval/index'
 export { default as eachMonthOfInterval } from './eachMonthOfInterval/index'
 export { default as eachQuarterOfInterval } from './eachQuarterOfInterval/index'
 export { default as eachWeekOfInterval } from './eachWeekOfInterval/index'
@@ -84,9 +63,7 @@ export { default as format } from './format/index'
 export { default as formatDistance } from './formatDistance/index'
 export { default as formatDistanceStrict } from './formatDistanceStrict/index'
 export { default as formatDistanceToNow } from './formatDistanceToNow/index'
-export {
-  default as formatDistanceToNowStrict
-} from './formatDistanceToNowStrict/index'
+export { default as formatDistanceToNowStrict } from './formatDistanceToNowStrict/index'
 export { default as formatDuration } from './formatDuration/index'
 export { default as formatISO } from './formatISO/index'
 export { default as formatISO9075 } from './formatISO9075/index'
@@ -109,9 +86,7 @@ export { default as getISOWeeksInYear } from './getISOWeeksInYear/index'
 export { default as getMilliseconds } from './getMilliseconds/index'
 export { default as getMinutes } from './getMinutes/index'
 export { default as getMonth } from './getMonth/index'
-export {
-  default as getOverlappingDaysInIntervals
-} from './getOverlappingDaysInIntervals/index'
+export { default as getOverlappingDaysInIntervals } from './getOverlappingDaysInIntervals/index'
 export { default as getQuarter } from './getQuarter/index'
 export { default as getSeconds } from './getSeconds/index'
 export { default as getTime } from './getTime/index'
@@ -122,6 +97,7 @@ export { default as getWeekYear } from './getWeekYear/index'
 export { default as getWeeksInMonth } from './getWeeksInMonth/index'
 export { default as getYear } from './getYear/index'
 export { default as intervalToDuration } from './intervalToDuration/index'
+export { default as intlFormat } from './intlFormat/index'
 export { default as isAfter } from './isAfter/index'
 export { default as isBefore } from './isBefore/index'
 export { default as isDate } from './isDate/index'
@@ -173,7 +149,16 @@ export { default as lastDayOfWeek } from './lastDayOfWeek/index'
 export { default as lastDayOfYear } from './lastDayOfYear/index'
 export { default as lightFormat } from './lightFormat/index'
 export { default as max } from './max/index'
+export { default as milliseconds } from './milliseconds/index'
 export { default as min } from './min/index'
+export { default as nextDay } from './nextDay/index'
+export { default as nextFriday } from './nextFriday/index'
+export { default as nextMonday } from './nextMonday/index'
+export { default as nextSaturday } from './nextSaturday/index'
+export { default as nextSunday } from './nextSunday/index'
+export { default as nextThursday } from './nextThursday/index'
+export { default as nextTuesday } from './nextTuesday/index'
+export { default as nextWednesday } from './nextWednesday/index'
 export { default as parse } from './parse/index'
 export { default as parseISO } from './parseISO/index'
 export { default as parseJSON } from './parseJSON/index'

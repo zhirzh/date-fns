@@ -34,7 +34,7 @@ export default function isSameQuarter(
   dirtyDateLeft: Date | number,
   dirtyDateRight: Date | number,
   options?: YearStartOptions
-  ): boolean {
+): boolean {
   requiredArgs(2, arguments)
 
   const dateLeftStartOfQuarter = startOfQuarter(dirtyDateLeft, options)
